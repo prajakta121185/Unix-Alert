@@ -1,0 +1,6 @@
+#!/usr/bin/env ksh
+#Prajakta Lokhande
+while read line
+do
+echo "$line"
+done < file
