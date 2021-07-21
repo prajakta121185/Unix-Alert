@@ -1,4 +1,11 @@
-<html>
+#!/bin/ksh
+
+(
+echo "To: prajakta12@gmail.com"
+echo "Subject: Job Status"
+echo "Content-Type: text/html"
+echo
+echo "<html>
 <style>
 table, th, td {
   border: 1px solid black;
@@ -11,11 +18,6 @@ table, th, td {
 <body>
 <p style="font-family:verdana;color:red;">
 JOB MONITORING</body>
-
-<select style="font-size:50px;">
-     <option >Test</option>
-	<option >Test1</option>
-</select>
 
 <table>
   <tr>
@@ -38,14 +40,8 @@ JOB MONITORING</body>
     <td>JOB-4</td>
     <td bgcolor='green'>SUCCESS</td>
   </tr>
-<tr>
-    <td>JOB-5</td>
-    <td bgcolor='green'>SUCCESS</td>
-  </tr>
-<tr>
-    <td>JOB-6</td>
-    <td bgcolor='green'>SUCCESS</td>
-  </tr>
 
 </table>
-<html>
+<html>";
+echo
+) | /usr/sbin/sendmail -t
